@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/w3css/3/w3.css">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+
+<!-- Navigation -->
+<!-- <nav class="w3-bar w3-black" style="margin-left: 100px;">
+<a href="#home" class="w3-button w3-bar-item">Home</a>
+
+</nav> -->
+
+<!-- Slide Show -->
+<section style="margin-top: 50px; margin-left: 200px;">
+
+
+
+
+    <div>
+        <img src="apple.jpeg" style="width: 200px;">
+        <h6>Apple cost 60 cent</h6>
+        <form th:action="@{/order}" method="post" th:object="${data}">
+
+
+
+            <img src="orange.jpg" style="width: 200px;">
+            <h6>Orange cost 65 cent</h6>
+            <label for="quantity1">Apple Quantity :</label>
+            <input type="number"
+                   id="quantity1" name="quantityApple" required min="1" style="width: 30px;">
+            <label for="quantity2">Orange Quantity :</label>
+            <input type="number"
+                   id="quantity2" name="quantityOrange" required min="1" style="width: 30px;">
+
+            <h4 style="border: medium;">Offers</h4>
+            <p>
+                Buy 1 apple get 1 apple free <input type="checkbox" name="appleOffer" >
+            </p>
+            <p>
+                Get 3 price of 2 on orange <input type="checkbox" name="orangeOffer" >
+            </p>
+            <input type="submit" value="Placeorder" style="color: green;">
+        </form>
+    </div>
+</section>
+
+</body>
+</html>

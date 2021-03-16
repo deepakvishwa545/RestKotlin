@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css"
+          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="ISO-8859-1">
+    <title>Bill</title>
+</head>
+<body>
+<script>
+    function fun(v)
+    {
+
+    }
+</script>
+
+<div>
+
+    <h2>Order Details:</h2>
+    <table style="border: 1px solid black; border-collapse: collapse;">
+
+        <thead style="border: 1px solid black; border-collapse: collapse;">
+        <tr>
+            <th style="border: 1px solid black; border-collapse: collapse;">Apple Quantity</th>
+            <th style="border: 1px solid black; border-collapse: collapse;">Orange Quantity</th>
+            <th style="border: 1px solid black; border-collapse: collapse;">Total Amount </th>
+        </tr>
+        </thead>
+        <tbody style="border: 1px solid black; border-collapse: collapse;">
+        <tr>
+            <td th:text="${orderDetails.quantityApple}"style="border: 1px solid black; border-collapse: collapse;" ></td>
+           <td th:text="${orderDetails.quantityOrange}" style="border: 1px solid black; border-collapse: collapse;"></td>
+            <td  th:text="${tAmmount}" style="border: 1px solid black; border-collapse: collapse;"></td>
+        </tr>
+        </tbody>
+    </table>
+     <a th:href="@{/orderConfirm}">
+    <input type="button" value="ConfirmOrder" style="margin-top: 50px;">
+     </a>
+
+    <a onclick="history.back(-1)" >
+        <input type="button" value="Back">
+    </a>
+</div>
+</body>
+</html>
